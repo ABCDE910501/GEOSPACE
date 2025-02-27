@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 from flask import Blueprint, request, jsonify
 from services.auth import authenticate_user, register_user
 from utils.auth import generate_jwt
@@ -26,3 +27,12 @@ def login():
         token = generate_jwt(user.id)
         return jsonify({"token": token}), 200
     return jsonify({"error": "Invalid credentials"}), 401
+=======
+from flask import Blueprint
+
+user_routes = Blueprint('user_routes', __name__)
+
+@user_routes.route('/users', methods=['GET'])
+def get_users():
+    return {"message": "List of users"}
+>>>>>>> 7f15917 (sidarth)

@@ -39,10 +39,17 @@ deactivate nondestructive
 if [ "${OSTYPE:-}" = "cygwin" ] || [ "${OSTYPE:-}" = "msys" ] ; then
     # transform D:\path\to\venv to /d/path/to/venv on MSYS
     # and to /cygdrive/d/path/to/venv on Cygwin
+<<<<<<< HEAD
     export VIRTUAL_ENV=$(cygpath /home/mouli/GEOSPACE/geoguide-backend/venv)
 else
     # use the path as-is
     export VIRTUAL_ENV=/home/mouli/GEOSPACE/geoguide-backend/venv
+=======
+    export VIRTUAL_ENV=$(cygpath /home/mouli/Geospace1/geoguide-backend/venv)
+else
+    # use the path as-is
+    export VIRTUAL_ENV=/home/mouli/Geospace1/geoguide-backend/venv
+>>>>>>> 7f15917 (sidarth)
 fi
 
 _OLD_VIRTUAL_PATH="$PATH"

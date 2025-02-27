@@ -33,7 +33,11 @@ end
 # Unset irrelevant variables.
 deactivate nondestructive
 
+<<<<<<< HEAD
 set -gx VIRTUAL_ENV /home/mouli/GEOSPACE/geoguide-backend/venv
+=======
+set -gx VIRTUAL_ENV /home/mouli/Geospace1/geoguide-backend/venv
+>>>>>>> 7f15917 (sidarth)
 
 set -gx _OLD_VIRTUAL_PATH $PATH
 set -gx PATH "$VIRTUAL_ENV/"bin $PATH

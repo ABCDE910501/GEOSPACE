@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 from flask import Flask, jsonify
 from flask_cors import CORS
 from dotenv import load_dotenv
@@ -25,4 +26,15 @@ def server_error(error):
     return jsonify({"error": "Internal Server Error"}), 500
 
 if __name__ == '__main__':
+=======
+from flask import Flask
+
+app = Flask(__name__)
+
+@app.route("/")
+def home():
+    return "Hello, Flask is working!"
+
+if __name__ == "__main__":
+>>>>>>> 7f15917 (sidarth)
     app.run(debug=True)
