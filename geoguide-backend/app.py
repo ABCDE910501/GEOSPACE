@@ -8,7 +8,10 @@ from routes import all_blueprints  # Import all blueprints from __init__.py
 load_dotenv()
 
 app = Flask(__name__)
-CORS(app)  # Enables CORS for frontend-backend communication
+
+# Configure CORS (Update `origins` with your frontend URL)
+CORS(app, resources={r"/api/*": {"origins": "*"}})  
+
 app.config['SECRET_KEY'] = os.getenv('SECRET_KEY', 'default_secret_key')
 
 # Register all routes dynamically
